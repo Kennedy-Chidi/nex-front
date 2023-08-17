@@ -91,10 +91,10 @@ export default {
         type: "text/javascript",
       },
 
-      // {
-      //   src: "/script/smartSupp.js",
-      //   type: "text/javascript",
-      // },
+      {
+        src: "/script/smartSupp.js",
+        type: "text/javascript",
+      },
     ],
   },
 
