@@ -91,10 +91,10 @@ export default {
         type: "text/javascript",
       },
 
-      {
-        src: "/script/smartSupp.js",
-        type: "text/javascript",
-      },
+      // {
+      //   src: "/script/smartSupp.js",
+      //   type: "text/javascript",
+      // },
     ],
   },
 
@@ -105,7 +105,7 @@ export default {
   plugins: [
     { src: "~/plugins/fontLoader.js", mode: "client" },
     { src: "~/plugins/clientFontLoader.js", mode: "client" },
-    { src: "~/plugins/support.js", ssr: false },
+    // { src: "~/plugins/support.js", ssr: false },
     // { src: "~/plugins/socket.io.js", ssr: false },
   ],
 
