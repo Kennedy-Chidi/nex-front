@@ -165,7 +165,7 @@ export default {
   // publicRuntimeConfig: {
   //   FILE_URL: process.env.FILE_DEV_URL,
   // },
-
+  //
   // Build Configuration: https://go.nuxtjs.dev/config-build
   target: "static",
 };
