@@ -29,7 +29,7 @@
 //   s0.parentNode.insertBefore(s1, s0);
 // })();
 var _smartsupp = _smartsupp || {};
-_smartsupp.key = "9d244d23e0440708c8c5bb3e1f9f9f2aa35e1af0";
+_smartsupp.key = "ccbec4e6b7ca5fbc952a1bd892e04f82c7959337";
 window.smartsupp ||
   (function (d) {
     var s,
