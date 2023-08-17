@@ -28,8 +28,9 @@
 //   s1.setAttribute("crossorigin", "*");
 //   s0.parentNode.insertBefore(s1, s0);
 // })();
+
 var _smartsupp = _smartsupp || {};
-_smartsupp.key = "ccbec4e6b7ca5fbc952a1bd892e04f82c7959337";
+_smartsupp.key = "5f1da0f7acba6342839e727a71b98b412b40e585";
 window.smartsupp ||
   (function (d) {
     var s,
