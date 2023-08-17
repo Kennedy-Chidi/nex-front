@@ -105,7 +105,8 @@ export default {
   plugins: [
     { src: "~/plugins/fontLoader.js", mode: "client" },
     { src: "~/plugins/clientFontLoader.js", mode: "client" },
-    { src: "~/plugins/socket.io.js", ssr: false },
+    { src: "~/plugins/support.js", ssr: false },
+    // { src: "~/plugins/socket.io.js", ssr: false },
   ],
 
   router: {
