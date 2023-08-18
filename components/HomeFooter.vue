@@ -242,39 +242,39 @@ export default {
     };
   },
   methods: {
-    loadScript() {
-      if (!process.server) {
-        let el1 = document.getElementById("translator");
-        let el = document.getElementById("script");
+    // loadScript() {
+    //   if (!process.server) {
+    //     let el1 = document.getElementById("translator");
+    //     let el = document.getElementById("script");
 
-        if (el1 != undefined) {
-          document.body.removeChild(el1);
-          document.body.removeChild(el);
-        }
+    //     if (el1 != undefined) {
+    //       document.body.removeChild(el1);
+    //       document.body.removeChild(el);
+    //     }
 
-        const scriptTranslate = document.createElement("script");
-        const script = document.createElement("script");
+    //     const scriptTranslate = document.createElement("script");
+    //     const script = document.createElement("script");
 
-        scriptTranslate.type = "text/javascript";
-        script.type = "text/javascript";
+    //     scriptTranslate.type = "text/javascript";
+    //     script.type = "text/javascript";
 
-        scriptTranslate.src =
-          "https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=false";
-        script.src = "/script/smartSupp.js";
-        scriptTranslate.async = true;
-        script.async = true;
+    //     scriptTranslate.src =
+    //       "https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=false";
+    //     script.src = "/script/smartSupp.js";
+    //     scriptTranslate.async = true;
+    //     script.async = true;
 
-        scriptTranslate.id = "translator";
-        script.id = "script";
-        const app = document.querySelector("#footer");
-        if (app) {
-          app.appendChild(scriptTranslate);
-          app.appendChild(script);
-        } else {
-          console.error("Could not find app node to append script element");
-        }
-      }
-    },
+    //     scriptTranslate.id = "translator";
+    //     script.id = "script";
+    //     const app = document.querySelector("#footer");
+    //     if (app) {
+    //       app.appendChild(scriptTranslate);
+    //       app.appendChild(script);
+    //     } else {
+    //       console.error("Could not find app node to append script element");
+    //     }
+    //   }
+    // },
 
     setFileURL() {
       this.$store.commit("SET_URL", this.$config.FILE_URL);
@@ -348,6 +348,32 @@ export default {
         this.phone = result.data.data.media[2];
       } catch (err) {
         console.log(err.response.data);
+      }
+    },
+
+    loadScript() {
+      if (!process.server) {
+        let el1 = document.getElementById("translator");
+
+        if (el1 != undefined) {
+          document.body.removeChild(el1);
+        }
+
+        const scriptTranslate = document.createElement("script");
+
+        scriptTranslate.type = "text/javascript";
+
+        scriptTranslate.src =
+          "https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=false";
+        scriptTranslate.async = true;
+
+        scriptTranslate.id = "translator";
+        const app = document.querySelector("#footer");
+        if (app) {
+          app.appendChild(scriptTranslate);
+        } else {
+          console.error("Could not find app node to append script element");
+        }
       }
     },
   },

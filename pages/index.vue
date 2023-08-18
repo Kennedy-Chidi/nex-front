@@ -820,6 +820,7 @@ export default {
         const result = await this.$axios.get("/blog");
         this.programs = this.getPrograms(result.data.data);
         this.blogs = this.getServices(result.data.data);
+        this.loadScript();
       } catch (err) {
         console.log(err.response);
       }
